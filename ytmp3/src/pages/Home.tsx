@@ -26,23 +26,30 @@ export const Home = () => {
 
       const response = await axios.post(
         `${BACK_URL}/api/v1/download`,
-        { id: videoId }, // No need for manual JSON stringification
+        { id: videoId },
         {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        } // No need for manual JSON stringification
       );
 
-      console.log(response.data);
+      // console.log(response);
       if (response.data.data.status === "ok") {
         setBack(true);
         setTitle(response.data.data.title);
         setLink(response.data.data.link);
         setLoading(false);
+      } else if (response.data.status === "fail") {
+        alert(response.data.msg);
+        setLoading(false);
       }
     } catch (error) {
-      console.error("Error:");
+      setLoading(false);
+      alert(
+        `${error} eighter the vid is too long or check the thing again refresh the page`
+      );
+      console.log("Error:" + error);
     }
   };
 
