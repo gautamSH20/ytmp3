@@ -2,8 +2,6 @@
 
 A YouTube-to-MP3 converter web app with seamless backend API integration.
 
-![React](https://img.shields.io/badge/React-18.2.0-blue) ![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
-
 ---
 
 ## **Table of Contents**
