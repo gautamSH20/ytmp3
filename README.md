@@ -40,7 +40,7 @@ A single-page React.js application that converts YouTube videos to MP3 files usi
 
 ## **Demo**
 
-[Live Demo](https://in-ytmp3.onrender.com/) _(Replace with your actual demo link)_
+[Live Demo](https://in-ytmp3.onrender.com/)
 
 ---
 
@@ -49,7 +49,7 @@ A single-page React.js application that converts YouTube videos to MP3 files usi
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/IN-YT2MP3.git
+   git clone https://github.com/gautamSH20/ytmp3.git
 
    ```
 
@@ -96,4 +96,4 @@ Contributions welcome!
 ## **Contact**
 
 - Your Name - @gautamSH20 - gs841400@gmail.com
-- Project Link: https://github.com/yourusername/IN-YT2MP3
+- Project Link: https://github.com/gautamSH20/ytmp3
