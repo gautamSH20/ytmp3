@@ -9,7 +9,8 @@ function App() {
   return (
     <div className={` ${val ? "dark " : ""}`}>
       <div
-        className={`min-h-screen max-h-screen flex flex-col justify-center items-center p-5 dark:bg-black  bg-white`}
+        className={`min-h-screen max-h-screen flex flex-col justify-center items-center p-5 bg-linear-to-br from-violet-500 to-fuchsia-500 dark:from-violet-900 
+  dark:to-fuchsia-900`}
       >
         <section className="fixed top-0">
           <Nav onclick={() => setval((e) => !e)} />

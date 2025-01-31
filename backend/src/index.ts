@@ -3,6 +3,7 @@ import cors from "cors";
 import fetch from "node-fetch";
 import "dotenv/config";
 import axios from "axios";
+import { BACK_URL } from "./confuig.js";
 
 const app = express();
 app.use(express.json());
@@ -31,15 +32,12 @@ app.post(
     }
 
     try {
-      const response = await axios.get(
-        `https://youtube-mp36.p.rapidapi.com/dl?id=${encodeURIComponent(id)}`,
-        {
-          headers: {
-            "X-RapidAPI-Key": process.env.API_KEY!, // Correct header name
-            "X-RapidAPI-Host": process.env.API_HOST!, // Correct header name
-          },
-        }
-      );
+      const response = await axios.get(`${BACK_URL}${encodeURIComponent(id)}`, {
+        headers: {
+          "X-RapidAPI-Key": process.env.API_KEY!, // Correct header name
+          "X-RapidAPI-Host": process.env.API_HOST!, // Correct header name
+        },
+      });
 
       // Handle API response properly
       if (response.data.status === "ok") {

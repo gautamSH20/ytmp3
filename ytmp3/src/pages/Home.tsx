@@ -54,12 +54,13 @@ export const Home = () => {
   };
 
   return (
-    <div className="flex flex-col items-center md:h-[70vh] p-4 md:w-[60vh] h-[70%] w-[45vh] rounded-md shadow-lg dark:bg-[#1e2939] dark:shadow-[#1e2949] shadow-gray-400 bg-white">
-      <div className="flex items-center mb-10 dark:text-blue-600 text-black gap-5">
+    <div className="flex flex-col items-center md:h-[70vh] p-4 md:w-[60vh] h-[70%] w-[45vh] rounded-md shadow-lg dark:bg-[#1e2939] dark:shadow-[#1e2949] shadow-white bg-linear-to-br from-[#6f19e8] to-[#a914ce]">
+      <div className="flex items-center mb-10 dark:text-blue-300 text-white gap-5">
         <MainIcon />
-        <div>IN-YT2MP4</div>
+        <div className="text-lg">IN-YT2MP4</div>
+        <hr />
       </div>
-      <div className="mb-1 text-lg opacity-60 dark:text-white text-black">
+      <div className="mb-1 text-lg opacity-60 dark:text-white ">
         {title
           ? title + " want to download it "
           : "here you can put the the link of the youtube video to download the audio"}
@@ -81,7 +82,7 @@ export const Home = () => {
               setLink("");
               setTitle("");
             }}
-            className="bg-blue-400 p-1 rounded-md   hover:w-[20vh] hover:shadow-lg shadow-black ease-in duration-300 cursor-pointer"
+            className="bg-pink-300 dark:bg-pink-700 text-black p-1 rounded-md   hover:w-[20vh] hover:shadow-lg shadow-black ease-in duration-300 cursor-pointer"
           >
             to do more
           </button>
@@ -89,7 +90,7 @@ export const Home = () => {
           <button
             disabled={loading}
             onClick={handel}
-            className="bg-blue-400 p-1 rounded-md w-[20vh]  hover:w-[30vh] hover:shadow-lg shadow-black ease-in duration-300 hover:text-lg"
+            className="bg-pink-300 dark:bg-pink-700 text-black dark:text-gray-300 p-1 rounded-md w-[20vh]  hover:w-[30vh] hover:shadow-lg shadow-black ease-in duration-300 hover:text-lg"
           >
             {loading ? "Converting...." : "Convert"}
           </button>
@@ -105,7 +106,7 @@ export const Home = () => {
                 setLink("");
                 setTitle("");
               }}
-              className="bg-blue-400 p-1 rounded-md cursor-pointer   hover:w-[20vh] hover:shadow-lg shadow-black ease-in duration-300"
+              className="bg-pink-400 dark:bg-pink-700 text-black p-1 rounded-md cursor-pointer   hover:w-[20vh] hover:shadow-lg shadow-black ease-in duration-300"
             >
               Download
             </button>
